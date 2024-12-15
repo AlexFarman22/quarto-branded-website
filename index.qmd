@@ -1,40 +1,28 @@
 ---
-title: "Brand"
-format:
-  html: 
-    other-links:
-      - href: dashboard.qmd
-        icon: speedometer
-        text: Dashboard
-  typst: 
-    output-file: index-typst.pdf
-  revealjs:
-    output-file: index-revealjs.html
-  dashboard: 
-    output-file: index-dashboard.html
+title: "Alexandre Farman-Farma"
+subtitle: "Stanford Student | Economics B.S. (Hons) & Statistics M.S. | alexff@stanford.edu"
+image: assets/personal-website-headshot.png
+about:
+  template: jolla
+  image-shape: round
+  links: 
+    - icon: github
+      text: Github
+      href: https://github.com/AlexFarman22
+    - icon: linkedin
+      text: Linkedin
+      href: https://www.linkedin.com/in/alexandre-farman-farma-041090265/
 ---
+*This is an example of a personal website built as Alex Farman-Farma's submission for STATS 290's Bonus Assignment.*
 
-## Overview
+## <span style="color: #8C1515;">About</span>
 
-This is a document themed using [**brand.yml**](https://posit-dev.github.io/brand-yml/)
+I am a student at Stanford University currently in my senior year of undergraduate studies. I am pursuing a Bachelor of Science degree in Economics with honors, with interests focused in Industrial Organization, Capital Markets and Development Economics. I am also pursuing a concurrent Master of Science degree in Statistics. I intend to confer both degrees simultaneously in May 2026.
 
-::: {.content-visible when-format="html:js"}
+## <span style="color: #8C1515;">Professional Interests</span>
 
-## Mermaid Diagram
+I am presently exploring my professional fit as a finance professional working to support companies in various stages of their capital needs. I have interned at Helios Investment Parnters, a private equity investment firm focused on businesses in emerging African markets, and most recently at Sageview Capital, a growth equity investment firm focused on software and tech-enabled services businesses in the United States and Canada. I'm grateful for all that I have learned and prioritize diverse experiences as I continue to discover my fit in the professional world.
 
-The following is a Mermaid diagram with branding applied:
-```{mermaid}
-%%| echo: false
-%%| fig-align: center
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-```
+## <span style="color: #8C1515;">Background / Personal Interests</span>
 
-:::
-
-## Subheading
-
-{{< lipsum 1 >}}
+I was born in New York City, to Iranian and French-American parents, although we soon moved to London, where I lived until 18. I'm immensely grateful for the cross-cultural exposure I gained in my childhood. Living in new environments and learning from the lived experiences of friends and mentors from backgrounds different to my own is a common thread in my personal, academic and professional lives. I'm immensely grateful for my new community in the Bay Area and for all that I've learned through engaging in a full social and academic life at Stanford. When I'm not studying or with my friends, I can be found: in a piano practice room at the music department, hiking and skiing, riding my motorcycle and reading about / watching all different types of world cinema.

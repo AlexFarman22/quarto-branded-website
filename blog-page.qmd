@@ -1,0 +1,61 @@
+---
+title: "STATS 207 and the Efficient Market Hypothesis"
+description: "In this post, I present a project I conducted in STATS 207 to investigate whether there was statistical evidence for Euguene Fama's Efficient Market Hypothesis (EMH) using data from the London Stock Exchange Group (LSEG) applied to both developed and developing markets and across decades."
+author: "Alexandre Farman-Farma"
+date: "12/15/2024"
+---
+## <span style="color: #8C1515;">Background</span>
+
+In this post, I present a project that I completed in the Spring of 2024 for STATS 207 "Introduction to Time Series Analysis", Stanford's core masters-level class on time series. As an economics undergraduate, I was interested in exploring time series applications to concepts which I had learned in class.
+
+I decided to use many of the techniques taught in STATS 207 to check for serial dependence in stock indices from 30 countries. I also implemented a very basic SARIMA model to see if I could predict price changes with any significance in any of these markets. In the remainder of this post, I share the abstract for my paper, as well as links to the full paper and the slides I used to present my work in class.
+
+## <span style="color: #8C1515;">Abstract</span>
+
+I perform a series of statistical tests and cross validations on stock index data from 11 developed and 19 developing countries to test the weak form of the Eﬀicient Market Hypothesis (EMH) proposed by Eugene Fama. I find strong evidence that developing markets exhibit behavior that is less in keeping with this hypothesis than developed markets. I also find a SARIMA model predicts price movements better than the EMH in these markets. I find no strong evidence of a trend showing either class of markets becoming more or less eﬀicient over time.
+
+## <span style="color: #8C1515;">Full Paper and Slides</span>
+
+- [<span style="color: #000000; text-decoration: underline;">View Full Paper</span>](assets/stats-207-paper.pdf){target="_blank"}
+- [<span style="color: #000000; text-decoration: underline;">View Presentation Slides</span>](assets/stats-207-slides.pdf){target="_blank"}
+
+## <span style="color: #8C1515;">Example R Implementation</span>
+
+Here is an example of what fitting an ARIMA regression model looks like in R:
+
+```{r, warning = FALSE, message = FALSE}
+library(ggplot2)
+library(forecast)
+set.seed(1)
+
+# Generate time series data
+n <- 100
+y_data <- numeric(n)
+epsilon <- rnorm(n, mean = 0, sd = 1) # Noise term
+
+# Generate y values recursively
+y_data[1] <- 0
+for (i in 2:n) {
+  y_data[i] <- 0.5 * y_data[i - 1] + epsilon[i]
+}
+
+# Create a data frame
+time_series_df <- data.frame(
+  time = 1:n,
+  y = y_data
+)
+
+# Fit an ARIMA model to the data
+arima_model <- auto.arima(y_data)
+
+# Plot the time series and ARIMA fit
+ggplot(time_series_df, aes(x = time, y = y)) +
+  geom_line(color = "blue", size = 1) +  # Original time series
+  geom_line(aes(y = fitted(arima_model)), color = "red", size = 1) +  # Fitted ARIMA line
+  labs(
+    title = "Time Series with ARIMA Model Fit",
+    x = "Time",
+    y = "Y"
+  ) +
+  theme_minimal()
+```

@@ -2,20 +2,20 @@ project:
   type: website
 
 website:
-  title: "_brand.yml Demo"
   navbar:
     left:
       - text: "Home"
         href: index.html
-      - text: "RevealJS"
-        href: index-revealjs.html
-      - text: "Dashboard"
-        href: dashboard.html
-      - text: "Typst"
-        href: index-typst.pdf
+      - text: "Blog Post"
+        href: blog-page.qmd
+      - text: "Web Links"
+        href: web-links.qmd
+    logo: assets/block-s.png
     tools:
       - icon: github
-        href: https://github.com/stanford-brand-yml/quarto-branded-website
+        href: https://github.com/AlexFarman22
+      - icon: linkedin
+        href: https://www.linkedin.com/in/alexandre-farman-farma-041090265/
 
 format:
   html:

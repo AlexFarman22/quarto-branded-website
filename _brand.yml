@@ -84,7 +84,7 @@ typography:
 ## https://github.com/quarto-dev/quarto-cli/pull/11378
 defaults:
   bootstrap:
-    navbar-bg: $brand-cardinal
+    navbar-bg: $cardinal
 
 #logo:
 #  small:
