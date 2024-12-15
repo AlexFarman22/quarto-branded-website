@@ -29,7 +29,7 @@ jobs:
 
         - name: "Install R dependencies"
           run: |
-            Rscript -e 'install.packages(c("rmarkdown", "knitr"), repos = "https://cran.rstudio.com")'
+            Rscript -e 'install.packages(c("rmarkdown", "knitr", "ggplot2", "forecast"), repos = "https://cran.rstudio.com")'
 
         - name: "Set up Quarto"
           uses: quarto-dev/quarto-actions/setup@v2
